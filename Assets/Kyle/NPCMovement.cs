@@ -9,6 +9,7 @@ public class NPCMovement : MonoBehaviour
     NavMeshAgent agent;
     [SerializeField]
     Vector3 destination;
+    bool timerActive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +28,12 @@ public class NPCMovement : MonoBehaviour
 
         if (Vector3.Distance(transform.position,agent.destination) <= 1.0f)
         {
-            Debug.Log("Nice");
-            RecalculatePath();
+            if (!timerActive)
+            {
+                Debug.Log("Nice");
+                timerActive = true;
+                StartCoroutine(Wait());
+            }
         }
 
         if(agent.destination != Vector3.zero)
@@ -51,5 +56,12 @@ public class NPCMovement : MonoBehaviour
         {
             RecalculatePath();
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(Random.Range(0.6f, 6));
+        RecalculatePath();
+        timerActive = false;
     }
 }

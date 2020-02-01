@@ -12,6 +12,8 @@ public class PlayerInteraction : MonoBehaviour
     private GameObject m_InteractableObject;
 
     private bool m_CanInteract = false;
+    private bool m_IsDestroying = false;
+    private float m_DestroyCounter = 0;
 
     void Start() {
         m_InteractableText.enabled = false;
@@ -19,19 +21,32 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update() {
         if (m_CanInteract) {
-            if (Input.GetKey(KeyCode.E)) {
+            if (Input.GetKeyDown(KeyCode.E)) {
                 Interact();
+            }
+        }
+
+        if (m_IsDestroying) {
+            m_DestroyCounter = m_DestroyCounter + Time.deltaTime;
+
+            if (Input.GetKeyUp(KeyCode.E)) {
+                m_IsDestroying = false;
+                m_CanInteract = true;
+            }
+            else if (m_DestroyCounter >= 3.0f) {
+                m_InteractableObject.GetComponent<Temple>().Attack(this.gameObject);
+                m_IsDestroying = false;
+                m_CanInteract = true;
             }
         }
     }
 
     public void Interact() {
+        m_DestroyCounter = 0;
         m_CanInteract = false;
-
         m_InteractableObject = m_CanInteractableObject;
         m_InteractableText.text = "Destroying..";
-        Debug.Log(m_InteractableObject.name);
-        StartCoroutine(m_InteractableObject.GetComponent<Temple>().Attack(this.gameObject));
+        m_IsDestroying = true;
     }
 
     public void OnCanInteractWithObject(GameObject a_Object) {
