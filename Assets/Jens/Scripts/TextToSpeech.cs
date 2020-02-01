@@ -10,6 +10,7 @@ public class TextToSpeech : MonoBehaviour
     {
         SpVoice voice;
         voice = new SpVoice();
-        voice.Speak("yo yo yo I go with the flow, and your mum is a ho.");
+        //voice.Speak("There he is, Sebastian the man the legend");
+        //voice.Speak("Quak");
     }
 }
