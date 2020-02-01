@@ -563,7 +563,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &705732521
 BoxCollider:
@@ -608,6 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CurrencyOverTime: 5
   m_ReceivedDestroyCurrency: 2
+  m_TemplateState: 0
 --- !u!136 &705732524
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -681,7 +682,7 @@ Transform:
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &804869503
 GameObject:
@@ -923,7 +924,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &854202546
 BoxCollider:
@@ -968,6 +969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CurrencyOverTime: 5
   m_ReceivedDestroyCurrency: 2
+  m_TemplateState: 0
 --- !u!136 &854202549
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1041,7 +1043,7 @@ Transform:
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -1142,7 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dffd6ffccfbbfc4b9f4062526f6c7e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerPrefab: {fileID: 5613258581402035509, guid: 24d5f53e257212341ac750ec4a0bee82,
+  m_PlayerPrefab: {fileID: 6511861417795663951, guid: eb50898fbb263954caca2f2c63ab94eb,
     type: 3}
 --- !u!82 &963194230
 AudioSource:
@@ -1927,7 +1929,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &1955154859
 BoxCollider:
@@ -1972,6 +1974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CurrencyOverTime: 5
   m_ReceivedDestroyCurrency: 2
+  m_TemplateState: 0
 --- !u!136 &1955154862
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2045,7 +2048,7 @@ Transform:
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1968552449
 GameObject:
@@ -2067,7 +2070,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &1968552450
 BoxCollider:
@@ -2112,6 +2115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CurrencyOverTime: 5
   m_ReceivedDestroyCurrency: 2
+  m_TemplateState: 0
 --- !u!136 &1968552453
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2207,7 +2211,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &2057171558
 BoxCollider:
@@ -2252,6 +2256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CurrencyOverTime: 5
   m_ReceivedDestroyCurrency: 2
+  m_TemplateState: 0
 --- !u!136 &2057171561
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2325,7 +2330,7 @@ Transform:
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2065534005
 GameObject:
@@ -2611,5 +2616,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
