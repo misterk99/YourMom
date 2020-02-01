@@ -10,6 +10,8 @@ public class NPCMovement : MonoBehaviour
     [SerializeField]
     Vector3 destination;
     bool timerActive = false;
+    [SerializeField]
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,9 @@ public class NPCMovement : MonoBehaviour
         if (agent == null || NPCManager.min == null || NPCManager.max == null)
             return;
         RecalculatePath();
+
+        animator = GetComponentInChildren<Animator>();
+       
 
     }
 
@@ -51,6 +56,10 @@ public class NPCMovement : MonoBehaviour
         if (path.status == NavMeshPathStatus.PathComplete)
         {
             agent.SetPath(path);
+            if(animator)
+            {
+                animator.SetBool("isMoving", true);
+            }
         }
         else
         {
@@ -60,6 +69,10 @@ public class NPCMovement : MonoBehaviour
 
     IEnumerator Wait()
     {
+        if (animator)
+        {
+            animator.SetBool("isMoving", false);
+        }
         yield return new WaitForSeconds(Random.Range(0.6f, 6));
         RecalculatePath();
         timerActive = false;
