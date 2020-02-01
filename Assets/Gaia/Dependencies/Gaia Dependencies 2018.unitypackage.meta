@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: c6e260c4119949245a77452846119ab6
+<<<<<<< HEAD
 DefaultImporter:
   externalObjects: {}
+=======
+timeCreated: 1550162021
+licenseType: Store
+DefaultImporter:
+>>>>>>> parent of 455463e... Changed TestLevel
   userData: 
   assetBundleName: 
   assetBundleVariant: 
