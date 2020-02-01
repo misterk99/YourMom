@@ -33,6 +33,7 @@ namespace Valve.VR.InteractionSystem
             TurnOffGravity = 1 << 6, // The object will not respond to external physics.
             AllowSidegrade = 1 << 7, // The object is able to switch from a pinch grab to a grip grab. Decreases likelyhood of a good throw but also decreases likelyhood of accidental drop
         };
+        
 
         public const AttachmentFlags defaultAttachmentFlags = AttachmentFlags.ParentToHand |
                                                               AttachmentFlags.DetachOthers |
@@ -1111,6 +1112,8 @@ namespace Valve.VR.InteractionSystem
             {
                 hoveringInteractable.SendMessage("HandHoverUpdate", this, SendMessageOptions.DontRequireReceiver);
             }
+
+        
         }
 
         /// <summary>
