@@ -6,6 +6,8 @@ public class SpotlightScript : MonoBehaviour
 {
     [SerializeField]
     Light spotLight;
+    [SerializeField]
+    LayerMask mask;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class SpotlightScript : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if(Physics.Raycast(transform.position,transform.forward * 5000, out hit))
+        if(Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, mask))
         {
             if (spotLight)
             {

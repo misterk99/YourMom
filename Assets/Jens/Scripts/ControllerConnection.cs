@@ -36,8 +36,7 @@ public class ControllerConnection : MonoBehaviour
             {
                 obj = Instantiate(m_PlayerPrefab, Vector3.zero, Quaternion.identity);
             }
-
-            obj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            
 
             if (controllers > 1)
             {

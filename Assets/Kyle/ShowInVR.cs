@@ -9,7 +9,7 @@ public class ShowInVR : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("N: " + other.gameObject.name);
-        if (other.gameObject.layer != LayerMask.NameToLayer("Both") && other.gameObject.layer != LayerMask.NameToLayer("Default"))
+        if (other.gameObject.layer != LayerMask.NameToLayer("Both") && other.gameObject.layer != LayerMask.NameToLayer("Default") && other.gameObject.layer != LayerMask.NameToLayer("Ground"))
         {
             GameObject localOther = other.gameObject;
             objectsInView.Add(localOther, localOther.layer);
