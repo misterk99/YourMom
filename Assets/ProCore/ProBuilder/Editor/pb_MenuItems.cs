@@ -28,7 +28,7 @@ public class pb_MenuItems : EditorWindow
 	[MenuItem("Tools/" + pb_Constant.PRODUCT_NAME + "/" + pb_Constant.PRODUCT_NAME + " Window", false, pb_Constant.MENU_EDITOR)]
 	public static void OpenEditorWindow()
 	{
-		pb_Editor.MenuOpenWindow();
+		pb_Editor pb_Editor = pb_Editor.MenuOpenWindow();
 	}
 #endregion
 
