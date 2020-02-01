@@ -11,6 +11,5 @@ public class TextToSpeech : MonoBehaviour
         SpVoice voice;
         voice = new SpVoice();
         //voice.Speak("There he is, Sebastian the man the legend");
-        //voice.Speak("Quak");
     }
 }

@@ -1,8 +1,13 @@
 fileFormatVersion: 2
 guid: cee00a0007cd5754e960f982a0482e2d
+<<<<<<< HEAD
 timeCreated: 1550162021
 licenseType: Store
 DefaultImporter:
+=======
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> parent of 8cbe5f4... Help
   userData: 
   assetBundleName: 
   assetBundleVariant: 
