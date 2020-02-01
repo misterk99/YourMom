@@ -9,7 +9,7 @@ public class ControllerConnection : MonoBehaviour
     {
         string[] joysticks = Input.GetJoystickNames();
 
-        int controllers = 2;
+        int controllers = 0;
         for (int i = 0; i < joysticks.Length; i++)
         {
             if (joysticks[i].Contains("Xbox"))
@@ -38,6 +38,7 @@ public class ControllerConnection : MonoBehaviour
             }
 
             obj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            obj.GetComponent<MoveTo>().m_PlayerID = i;
 
             if (controllers > 1)
             {

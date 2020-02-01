@@ -19,14 +19,14 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (ControllerManager.GetTriggerFromPlayer(GetComponent<MoveTo>().m_PlayerID) > 0.2f) {
             if (m_CanInteract) {
                 Interact();
             }
             
         }
 
-        if (Input.GetKey(KeyCode.E))
+        if (ControllerManager.GetTriggerFromPlayer(GetComponent<MoveTo>().m_PlayerID) > 0.2f)
         {
             GetComponent<Animator>().SetBool("bounce", true);
         }

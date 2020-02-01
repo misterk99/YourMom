@@ -6,28 +6,26 @@ using UnityEngine.AI;
 public class MoveTo : MonoBehaviour
 {
     private Vector3 destination;
-
-    void Start()
-    {
-    }
+    public int m_PlayerID;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        Debug.Log(ControllerManager.GetTriggerFromPlayer(m_PlayerID));
+        if (ControllerManager.GetVerticalAxisFromPlayer(m_PlayerID) < -0.2f)
         {
             GetComponent<NavMeshAgent>().destination = transform.position + transform.forward;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (ControllerManager.GetVerticalAxisFromPlayer(m_PlayerID) > 0.2f)
         {
             GetComponent<NavMeshAgent>().destination = transform.position + -transform.forward;
         }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(0, 1, 0);
-        }
-        if (Input.GetKey(KeyCode.A))
+        if (ControllerManager.GetHorizontalAxisFromPlayer(m_PlayerID) < -0.2f)
         {
             transform.Rotate(0, -1, 0);
+        }
+        if (ControllerManager.GetHorizontalAxisFromPlayer(m_PlayerID) > 0.2f)
+        {
+            transform.Rotate(0, 1, 0);
         }
     }
 }
